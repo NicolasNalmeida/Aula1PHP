@@ -1,0 +1,13 @@
+<?php 
+
+	session_id('ium002f1mlpim8vnvdl3mn6sqi');
+
+	require_once("config.php");
+
+	session_regenerate_id();
+
+	echo session_id() . "<br>";
+
+	var_dump($_SESSION);
+
+ ?>
