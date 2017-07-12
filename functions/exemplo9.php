@@ -63,7 +63,7 @@
 
 	function exibe($cargos)
 	{
-		$html = '<ul>';
+		$html = '<ul class="classe-teste">';
 
 			foreach ($cargos as $cargo) {
 				$html .= '<li>';

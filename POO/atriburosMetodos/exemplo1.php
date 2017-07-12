@@ -51,9 +51,9 @@
 	}//fim classe Carro
 
 	$gol = new Carro();
-	$gol->setModelo = ("Gol GT");
-	$gol->setMotor = (1.6);
-	$gol->setAno = (2017);
+	$gol->setModelo("Gol GT");
+	$gol->setMotor(1.6);
+	$gol->setAno(2017);
 
 	print_r($gol->exibir());
 
