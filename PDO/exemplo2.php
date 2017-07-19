@@ -4,19 +4,13 @@
 
 	$stmt = $conn->prepare("INSERT INTO tb_usuarios(deslogin, dessenha) VALUES(:LOGIN, :PASSWORD)");
 
-	$login = "EronIldo";
-	$password = "9485394854jgj";
+	$login = "Bino";
+	$password = "45645646";
 
 	$stmt->bindParam(":LOGIN", $login);
 	$stmt->bindParam(":PASSWORD", $password);
 
-	if($stmt->execute())
-	{
-		echo "Os Dados foram inseridos com sucesso";
-	}
-	else
-	{
-		echo "deu ruim";
-	}
+	$stmt->execute();
+	echo "Os Dados foram inseridos com sucesso";
 
  ?>

@@ -18,6 +18,4 @@
 	}
 	echo "</ul>";
 
-	// var_dump($results);
-
 ?>
