@@ -6,7 +6,7 @@
 
 		public function __construct()
 		{
-			$this->conn = new PDO("mysql:host=localhost;dbname=db_exercicio", "root", "");
+			$this->conn = new PDO("mysql:host=localhost;dbname=bd_exercicio", "root", "");
 		}
 
 		private function setParams($statement, $parameters = array())
@@ -25,32 +25,10 @@
 		{
 			$stmt = $this->conn->prepare($rawQuery);
 
-			$this->setParam($stmt, $params);
+			$this->setParams($stmt, $params);
 
 			$stmt->execute();
 
 			return $stmt;
 		}
-
-		public function insert()
-		{
-			
-		}
-
-		public function delete()
-		{
-
-		}
-
-		public function update()
-		{
-
-		}
-
-		public function select()
-		{
-
-		}
-
 	}
-
