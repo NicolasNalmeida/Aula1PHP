@@ -1,10 +1,6 @@
 <?php 
 
-	$images = scandir("images");
-	// var_dump($images);
-
-	
-	
+	$images = scandir("images");	
 
 	foreach ($images as $img) {
 		if(!in_array($img, array(".", "..")))

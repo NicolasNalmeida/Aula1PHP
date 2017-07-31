@@ -37,7 +37,7 @@
 
 		.item-list
 		{
-			width: calc(100% / 5);
+			width: calc(100% / 6);
 			float: left;
 			color: #fff;
 			
@@ -73,12 +73,17 @@
 			<li class="item-list">
 				<a class="link-menu" href="PageSelectAll.php" class="item-link">
 					<div class="content-menu">Select All</div>
-				 All</a>
+				</a>
+			</li>
+			<li class="item-list">
+				<a class="link-menu" href="PageSelectName.php" class="item-link">
+					<div class="content-menu">Select Name</div>
+				</a>
 			</li>
 			<li class="item-list">
 				<a class="link-menu" href="PageSelectID.php" class="item-link">
 					<div class="content-menu">Select By Id</div>
-				 by Id</a>
+				</a>
 			</li>
 			<li class="item-list">
 				<a class="link-menu" href="PageUpdate.php" class="item-link">

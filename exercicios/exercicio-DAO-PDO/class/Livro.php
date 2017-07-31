@@ -98,7 +98,6 @@
 			));
 
 			$resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
 			echo '<ul class="content-list">';
 			foreach ($resultado as $row) {
 				foreach ($row as $key => $value) {
@@ -107,6 +106,18 @@
 			}
 			echo "</ul>";
 
+		}
+
+		public function selectByName($nome)
+		{
+			$this->setNomeLivro($nome);
+			$sql = new Sql();
+			$stmt = $sql->query("SELECT * FROM tb_livro WHERE nomeLivro LIKE :NOME", array(
+				':NOME' => "%" . $this->getNomeLivro() . "%"
+			));
+
+			$resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			return $resultado;
 		}
 
 		public function update($id)
