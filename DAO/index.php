@@ -34,88 +34,93 @@
 
 	// echo $usuario;
 
+	// Delete de usuarios
+	$usuario = new Usuario();
 
+	$usuario->loadById(28);
+	$usuario->delete();
+	echo $usuario;
 
-	$cod = 6;
+	// $cod = 6;
 
-	switch ($cod) {
-		case 1:
-			// Carrega um usuário
-			$fulano = new Usuario();
+	// switch ($cod) {
+	// 	case 1:
+	// 		// Carrega um usuário
+	// 		$fulano = new Usuario();
 
-			$idUsuario = 21;
-			$fulano->loadById($idUsuario);
+	// 		$idUsuario = 21;
+	// 		$fulano->loadById($idUsuario);
 
-			echo $fulano->listarUsuario();
-			break;
+	// 		echo $fulano->listarUsuario();
+	// 		break;
 
-		case 2:
-			// Carrega uma lista de usuarios
-			$lista = Usuario::getList();
+	// 	case 2:
+	// 		// Carrega uma lista de usuarios
+	// 		$lista = Usuario::getList();
 			
-			foreach ($lista as $row) {
-				echo "<ul>";
-				foreach ($row as $key => $value) {
-					echo "<li>" . $key . ": " . $value . "</li>";
-				}
-				echo "</ul>";
-			}
-			break;
+	// 		foreach ($lista as $row) {
+	// 			echo "<ul>";
+	// 			foreach ($row as $key => $value) {
+	// 				echo "<li>" . $key . ": " . $value . "</li>";
+	// 			}
+	// 			echo "</ul>";
+	// 		}
+	// 		break;
 
-		case 3:
-			// Carrega uma lista de usuarios buscando pelo login
-			$nomeBusca = "m";
-			$search = Usuario::search($nomeBusca);
-			foreach ($search as $row) {
-				echo "<ul>";
-				foreach ($row as $key => $value) {
-					echo "<li>" . $key . ": " . $value . "</li>";
-				}
-				echo "</ul>";
-			}
-			break;
+	// 	case 3:
+	// 		// Carrega uma lista de usuarios buscando pelo login
+	// 		$nomeBusca = "m";
+	// 		$search = Usuario::search($nomeBusca);
+	// 		foreach ($search as $row) {
+	// 			echo "<ul>";
+	// 			foreach ($row as $key => $value) {
+	// 				echo "<li>" . $key . ": " . $value . "</li>";
+	// 			}
+	// 			echo "</ul>";
+	// 		}
+	// 		break;
 
-		case 4:
-			// Carrega um usuario usando um login e a senha
-			$login = "FulanoNasc";
-			$senha = "12312321";
-			$usuario = new Usuario();
-			$usuario->login($login, $senha);
-			$usuario->listarUsuario();
+	// 	case 4:
+	// 		// Carrega um usuario usando um login e a senha
+	// 		$login = "FulanoNasc";
+	// 		$senha = "12312321";
+	// 		$usuario = new Usuario();
+	// 		$usuario->login($login, $senha);
+	// 		$usuario->listarUsuario();
 
-			break;
+	// 		break;
 
-		case 5:
-			// Insert de um Usuario
-			$aluno = new Usuario();
+	// 	case 5:
+	// 		// Insert de um Usuario
+	// 		$aluno = new Usuario();
 
-			$usuario = "Paulo";
-			$senha = "76948474";
+	// 		$usuario = "Paulo";
+	// 		$senha = "76948474";
 
-			$aluno->setDeslogin($usuario);
-			$aluno->setDessenha($senha);
-			$aluno->insert();
+	// 		$aluno->setDeslogin($usuario);
+	// 		$aluno->setDessenha($senha);
+	// 		$aluno->insert();
 			
-			$aluno->listarUsuario();
+	// 		$aluno->listarUsuario();
 
-			break;
+	// 		break;
 
-		case 6:
-			// Update de usuario
-			$usuario = new Usuario();
+	// 	case 6:
+	// 		// Update de usuario
+	// 		$usuario = new Usuario();
 
-			$idUsuario = 13;
-			$user = "NicolasAlmeida";
-			$senha = "12390###12783";
+	// 		$idUsuario = 13;
+	// 		$user = "NicolasAlmeida";
+	// 		$senha = "12390###12783";
 
-			$usuario->loadById($idUsuario);
-			$usuario->update($user, $senha);
+	// 		$usuario->loadById($idUsuario);
+	// 		$usuario->update($user, $senha);
 			
-			$usuario->listarUsuario();
+	// 		$usuario->listarUsuario();
 
-			break;
+	// 		break;
 
-		default:
-			echo "Codigo invalido";
-			break;
-	}
+	// 	default:
+	// 		echo "Codigo invalido";
+	// 		break;
+	// }

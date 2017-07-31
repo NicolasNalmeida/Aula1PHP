@@ -70,19 +70,19 @@
 
 		public function select()
 		{
-			echo "SELECIONAR <br>";
+			echo "<h1>SELECIONAR TODOS</h1>";
 
 			$sql = new Sql();
 			$stmt = $sql->query("SELECT * FROM tb_livro ORDER BY idLivro ASC");
 
 			$resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-			echo "<ul>";
+			echo '<ul class="content-list">';
 			foreach ($resultado as $row) {
 				foreach ($row as $key => $value) {
-					echo "<li>" . "<strong>" . $key . "</strong>" . ": " . $value . "</li>";
+					echo '<li class="item-list">' . "<strong>" . $key . "</strong>" . ": " . $value . "</li>";
 				}
-				echo "<br>";
+				echo '<br>';
 			}
 			echo "</ul>";
 		}
@@ -99,10 +99,10 @@
 
 			$resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-			echo "<ul>";
+			echo '<ul class="content-list">';
 			foreach ($resultado as $row) {
 				foreach ($row as $key => $value) {
-					echo "<li>" . "<strong>" . $key . "</strong>" . ": " . $value . "</li>";
+					echo '<li class="item-list">' . "<strong>" . $key . "</strong>" . ": " . $value . "</li>";
 				}
 			}
 			echo "</ul>";
