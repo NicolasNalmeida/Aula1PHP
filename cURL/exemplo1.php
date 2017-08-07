@@ -1,6 +1,6 @@
 <?php 
 
-	$cep = "08577250";
+	$cep = "05437002";
 	$link = "https://viacep.com.br/ws/$cep/json/unicode/";
 
 	$ch = curl_init($link);
