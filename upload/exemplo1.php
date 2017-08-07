@@ -31,7 +31,6 @@
 		else
 		{
 			throw new Exception("Error: Não foi possível realizar o upload.");
-			
 		}
 		
 	}
